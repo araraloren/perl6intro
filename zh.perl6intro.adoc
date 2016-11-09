@@ -1,0 +1,14 @@
+= Perl 6 入门
+Naoum Hankache <naoum@hankache.com>; Romuald Nuguet <kolikov@free.fr>
+:description: Perl 6 入门教程
+:keywords: perl6, perl 6, introduction, perl6intro, perl 6 introduction, Introduction à Perl 6, perl 6 入门, perl 6 教程
+:Revision: 1.0
+:icons: font
+:source-highlighter: pygments
+//:pygments-style: manni
+:source-language: perl6
+:pygments-linenums-mode: table
+:toc: left
+:toc-title: 目录
+:doctype: book
+:lang: zh
