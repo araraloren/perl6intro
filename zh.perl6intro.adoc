@@ -13,11 +13,11 @@ Naoum Hankache <naoum@hankache.com>; Romuald Nuguet <kolikov@free.fr>
 :doctype: book
 :lang: zh
 
- 本文档意在给予那些 Perl 6的新人一个Perl 6 语言的快速概述。
+本文档意在给予那些 Perl 6的新人一个Perl 6 语言的快速概述。
 
- 本文档中的一些章节会引用 https://docs.perl6.org[Perl 6文档]的部分内容（更加完整、准确），如果你需要知晓特定主题的详细信息，我推荐你阅读它们。
+本文档中的一些章节会引用 https://docs.perl6.org[Perl 6文档]的部分内容（更加完整、准确），如果你需要知晓特定主题的详细信息，我推荐你阅读它们。
 
- 在本文档中，你将发现例子是讨论最多的话题，为了更好的理解它们，最好花时间重现这些例子。
+在本文档中，你将发现例子是讨论最多的话题，为了更好的理解它们，最好花时间重现这些例子。
 
 .License
 这份文档使用 Creative Commons Attribution-ShareAlike 4.0 International 许可发布。
