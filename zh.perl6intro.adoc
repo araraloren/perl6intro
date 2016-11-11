@@ -12,3 +12,84 @@ Naoum Hankache <naoum@hankache.com>; Romuald Nuguet <kolikov@free.fr>
 :toc-title: 目录
 :doctype: book
 :lang: zh
+
+ 本文档意在给予那些 Perl 6的新人一个Perl 6 语言的快速概述。
+
+ 本文档中的一些章节会引用 https://docs.perl6.org[Perl 6文档]的部分内容（更加完整、准确），如果你需要知晓特定主题的详细信息，我推荐你阅读它们。
+
+ 在本文档中，你将发现例子是讨论最多的话题，为了更好的理解它们，最好花时间重现这些例子。
+
+.License
+这份文档使用 Creative Commons Attribution-ShareAlike 4.0 International 许可发布。
+要查看许可的副本，请访问
+
+* http://creativecommons.org/licenses/by-sa/4.0/。
+
+.Contribution
+对本文档的完善提供帮助:
+
+* http://github.com/hankache/perl6intro。
+
+.Feedback
+欢迎您的反馈:
+naoum@hankache.com
+blackcatoverwall@gmail.com
+
+如果你喜欢本文档，请收藏这个仓库：
+https://github.com/hankache/perl6intro[Github].
+
+.Translations
+* Bulgarian: http://bg.perl6intro.com
+* Dutch: http://nl.perl6intro.com
+* French: http://fr.perl6intro.com
+* German: http://de.perl6intro.com
+* Japanese: http://ja.perl6intro.com
+* Portuguese: http://pt.perl6intro.com
+* Spanish: http://es.perl6intro.com
+* Chinese - NYC: http://zh.perl6intro.com
+
+:sectnums:
+== 入门
+=== 什么是 Perl 6
+Perl 6 是一个高阶的，通用的，渐进类型（gradually typed）语言。
+Perl 6 支持过程式、面向对象、函数式多中编程范式。
+
+.Perl 6 座右铭:
+* TMTOWTDI (来自 Tim Toady): 条条大路通罗马（There is more than one way to do it）.
+* 简单的事情应该保持简单，困难的事情应该变的简单，以及不可能的事情应该变的困难（Easy things should stay easy, hard things should get easier, and impossible things should get hard）。
+
+=== 术语
+* *Perl 6*: 含有一个测试套件的语言规范，实现并通过了测试套件的语言即认为是 Perl 6语言的实现。
+* *Rakudo*: Perl 6的一个编译器。
+* *Rakudobrew*: Rakudo 的安装管理器。
+* *Panda*: 是一个 Perl 6的模块安装器。
+* *Rakudo Star*: 对 Rakudo、Panda、Perl 6模块的集合以及文档进行了打包。
+
+=== 安装 Perl 6
+.Linux
+. 安装 Rakudobrew: https://github.com/tadzik/rakudobrew
+
+. 安装 Rakudo: 在终端输入以下命令 `rakudobrew build moar`
+
+. 安装 Panda: 在终端输入以下命令 `rakudobrew build panda`
+
+. 安装 Task::Star一个包含在Rakudo Star中的模块的超级包: 在终端输入以下命令 `panda install Task::Star`
+
+更多其它选项, 请访问 http://rakudo.org/how-to-get-rakudo/#Installing-Rakudo-Star-Linux
+
+.OSX
+下面4中选项是可用的:
+
+* 使用和 Linux 一样的安装步骤
+* 使用 homebrew 安装: `brew install rakudo-star`
+* 使用 MacPorts 安装: `sudo port install rakudo`
+* 下载最新的安装器 (以 .dmg 后缀结尾): http://rakudo.org/downloads/star/
+
+.Windows
+. 下载最新的安装器 (以 .msi 后缀结尾): http://rakudo.org/downloads/star/ +
+如果你的系统是`32`位的，请选择`x86`版本，如果是`64`位，下载`x86-64`的版本。
+. 在完成安装之后确保`C:\rakudo\bin`已经添加到环境变量。
+
+.Docker
+. 获取官方 Docker 镜像 `docker pull rakudo-star`
+. 使用下载的镜像启动一个容器 `docker run -it rakudo-star`
