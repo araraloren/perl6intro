@@ -15,7 +15,8 @@ Naoum Hankache <naoum@hankache.com>; Romuald Nuguet <kolikov@free.fr>
 
 本文档意在给予那些 Perl 6的新人一个Perl 6 语言的快速概述。
 
-本文档中的一些章节会引用 https://docs.perl6.org[Perl 6文档]的部分内容（更加完整、准确），如果你需要知晓特定主题的详细信息，我推荐你阅读它们。
+本文档中的一些章节会引用 https://docs.perl6.org[Perl 6文档]的部分内容（更加完整、准确），
+如果你需要知晓特定主题的详细信息，我推荐你阅读它们。
 
 在本文档中，你将发现例子是讨论最多的话题，为了更好的理解它们，最好花时间重现这些例子。
 
@@ -35,7 +36,7 @@ Naoum Hankache <naoum@hankache.com>; Romuald Nuguet <kolikov@free.fr>
 naoum@hankache.com
 blackcatoverwall@gmail.com
 
-如果你喜欢本文档，请收藏这个仓库：
+如果你喜欢本文档，请_Star_这个仓库：
 https://github.com/hankache/perl6intro[Github].
 
 .Translations
@@ -56,7 +57,8 @@ Perl 6 支持过程式、面向对象、函数式多中编程范式。
 
 .Perl 6 座右铭:
 * TMTOWTDI (来自 Tim Toady): 条条大路通罗马（There is more than one way to do it）.
-* 简单的事情应该保持简单，困难的事情应该变的简单，以及不可能的事情应该变的困难（Easy things should stay easy, hard things should get easier, and impossible things should get hard）。
+* 简单的事情应该保持简单，困难的事情应该变的简单，以及不可能的事情应该变的困难（Easy
+things should stay easy, hard things should get easier, and impossible things should get hard）。
 
 === 术语
 * *Perl 6*: 含有一个测试套件的语言规范，实现并通过了测试套件的语言即认为是 Perl 6语言的实现。
@@ -93,3 +95,32 @@ Perl 6 支持过程式、面向对象、函数式多中编程范式。
 .Docker
 . 获取官方 Docker 镜像 `docker pull rakudo-star`
 . 使用下载的镜像启动一个容器 `docker run -it rakudo-star`
+
+=== 运行 Perl 6代码
+
+你可以使用 REPL（即读取-求值-打印 循环（Read-Eval-Print Loop））方式运行 Perl 6的代码。
+方法就是，打开一个终端，在窗口输入`perl6`，然后回车，这时候会出现一个提示符'>'。接下来，
+输入一行代码并且按下回车，REPL 将会打印出代码的结果。你还可以输入更多的代码或者输入`exit`
+并按下回车键离开`REPL`。
+
+或者，你可以将代码写入文件，保存，并且运行它，这里推荐 Perl 6的脚本使用`.pl6`扩展名。要
+运行这个文件你只需在终端输入`perl6 filename.pl6`，然后按下回车。但是不像 REPL，这种方式
+不会自动的打印每一行的结果：代码中必须包含形如`say`一样的语句来打印输出。
+
+REPL 通常用来尝试一小段代码，这通常是单行代码（通常所说的 one-liner）。对于一行以上的
+程序建立将代码存储在文件中，然后运行它们。
+
+你还可以通过在命令行输入`perl6 -e '这里是你的代码'`并且按下回车来运行你的单行代码。
+
+[TIP]
+--
+Rakudo Star 捆绑了一个行编辑器来帮助你更好的使用 REPL。
+
+如果你安装了普通的 Rakudo 而不是 Rakudo Star，你可能没有开启行编译器功能（使用上下键
+在历史命令移动，左右键编辑输入，TAB完成）。运行下面的命令来获取这个功能：
+
+* 在 Windows、Linux、OSX上，可以使用 `panda install Linenoise`
+* 如果是 Linux 系统，可能比较喜欢 _ReadLine_ 库 `panda install ReadLine`
+--
+
+=== 编辑器
